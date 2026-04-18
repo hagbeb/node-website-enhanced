@@ -1,0 +1,39 @@
+extends layout.pug
+
+block content
+
+  article.portfolio-intro
+
+    h1 Boffware JS
+
+    p Hi, I'm Andrew, and I'm a Full Stack JavaScript Developer. 
+      br
+      br
+      | Whether you require front-end, back-end, or both, developing secure and practical JavaScript apps is what I do.
+      br
+      br
+      | Security is paramount, which is why I am certified by IBM in Application Security for Developers to make sure your apps are secure.
+      br
+      br
+      | I have also developed WordPress websites since 2020.
+      br
+      br
+      | Check out the projects I have created below, and feel free to 
+      a(href='/contact') contact
+      |  if you would like to chat about how I can help:
+
+
+  article.portfolio-project-thumbs
+    .projects-box.box.grid    
+      each project, index in projects
+        div.cell
+          a(href=`/project/${index}`, target="_blank")
+            div.photo-cube
+              .back-overlay
+                button Learn More
+              img.back(src=`/static${project.image_urls[0][3]}` alt=project.project_name)
+              img.front(src=`/static${project.image_urls[0][0]}` alt=project.project_name)
+              img.left(src=`/static${project.image_urls[0][1]}` alt=project.project_name)
+              img.right(src=`/static${project.image_urls[0][2]}` alt=project.project_name)
+            h5 #{project.project_name}
+  script(src='/static/js/transforms.js')

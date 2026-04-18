@@ -1,0 +1,515 @@
+
+/*
+  Main styles
+*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 100%;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  font-family: 'Merriweather';/*"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;*/
+  font-weight: normal;
+  line-height: 1.5;
+  color: #0a0a0a;
+  background: #fefefe;
+  background: #2a2b2d;
+  transform: translateX(0px);
+  transition: all 0.4s ease-out;
+}
+
+article {
+  background: #fcf0f4;
+}
+
+h1,h2,h3,h4,h5,p{
+  font-family: 'Merriweather', serif;
+}
+
+h5{
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 2.5px;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+h6{
+  letter-spacing: 2.5px;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+p{
+  font-size: 15px;
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  min-height: 100%;
+  background: #fcf0f4;
+}
+
+.flex-row-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 30px;
+}
+
+.box {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 50px 30px;
+  /*background: #fefefe; DEFAULT THAT I REMOVED */ 
+  border-bottom: 1px solid #eaeaea;
+}
+
+.box h1,
+.box h6 {
+  margin: 0 auto 8px;
+}
+
+.box h6 {
+  font-size: 1rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.box li {
+  font-size: 13px;
+}
+
+
+/*
+  Sidebar and mobile header
+*/
+nav {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+nav a {
+  width: 100%;
+  vertical-align: middle;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #555; 
+}
+
+nav a span {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  min-width: 300px;
+  max-width: 300px;
+  height: 100%;
+  min-height: 100%;
+  padding: 20px;
+  background: #2a2b2d;
+}
+
+.sidebar-info-box {
+  margin: auto;
+}
+
+.thumbnail-box {
+  padding: 0 10px;
+}
+
+.sidebar .thumbnail {
+  width: 100%;
+  max-width: 250px;
+  border: 4px solid #fff;
+}
+
+.dev-intro-box {
+  padding: 10px;
+}
+
+.sidebar h5 {
+  color: #fefefe;
+  margin: 0 auto 0.5rem;
+}
+
+.sidebar p {
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #b2b8b3
+}
+
+.sidebar a {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #828583;
+}
+
+.header {
+  vertical-align: middle;
+  color: #fefefe;
+  height: 40px;
+  padding: 0.5rem;
+  background: #0a0a0a;
+  border-left: 1px solid #0a0a0a;
+}
+
+.header span {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.header button {
+  vertical-align: top;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  width: 20px;
+  height: 16px;
+  border: none;
+  background: #0a0a0a;
+  margin-top: 3px;
+  margin-right: 10px;
+  border-top: 2px solid #fefefe;
+  border-bottom: 2px solid #fefefe;
+}
+
+.header button:after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: #fefefe;
+}
+
+
+/*
+  Home page styles
+*/
+.portfolio-intro {
+  max-width: 1200px;
+  padding: 40px 50px 30px;
+  /* added by me */
+  text-align: center;
+}
+
+.portfolio-intro h1 {
+  font-size: 1.5rem;
+  color: #0a0a0a;
+  margin: 0 auto 20px;
+  border-bottom: 1px solid #000;
+}
+
+.portfolio-intro p {
+  text-rendering: optimizeLegibility;
+  font-size: 140%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.projects-box h5 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 2.25px;
+  text-transform: uppercase;
+  color: #222;;
+  margin: 0 auto 8px;
+}
+
+.cell {
+    /* add perspective so the cube can be 3D */
+    perspective: 800px;
+    /* center headlines*/
+    text-align: center;
+}
+
+.cell a {
+  width: 100%;
+}
+
+.cell img {
+  width: 100%;
+  min-width: 100px;
+  border: 4px solid #fff;
+}
+
+
+/* 
+  About and project pages styles 
+*/
+.about-intro-box p,
+.project-info-box p {
+  font-size: 125%;
+}
+
+.about-bio p {
+  font-size: 15px;
+  padding-top: 40px;
+}
+
+.skills-contact-box ul {
+  margin-bottom: 35px;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 1065px;
+  margin-bottom: 15px;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px 1px rgba(10, 10, 10, 0.2);
+}
+
+.btn-link {
+  display: block;
+  text-align: center;
+  color: #fefefe;
+  width: 100%;
+  max-width: 255px;
+  margin: auto 0 5px 0;
+  padding: 0.85em 1em;
+  background-color: #2a2b2d;
+  border: 1px solid transparent;
+}
+
+/* 
+  Tablet layout styles 
+*/
+@media screen and (min-width: 768px) {
+  .sidebar h5 {
+    font-size: 1.25rem;
+  }
+
+  .portfolio-intro h1 {
+    font-size: 3rem;
+  }
+
+  .box {
+    border-bottom: none;
+  }
+
+  .two-col .box:nth-of-type(1) {
+    width: 70%;
+    padding-right: 15px;
+  }
+  .two-col .box:nth-of-type(2) {
+    width: 30%;
+    padding-top: 50px;
+    padding-left: 15px;
+  }
+/*
+  .cell {
+    margin: 0 0 15px;
+  }
+*/
+  .cell h5 {
+    font-size: 1.25rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+
+/* 
+  Desktop layout styles 
+*/
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    left: 0;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .wrapper {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+  }
+  
+  .inner-wrapper {
+    max-width: 1200px;
+  }
+}
+/* ALSO EXTRA STYLE */
+.default-space {
+  padding: 10px 2em 20px 2em;
+}
+
+/** 
+* EXTRA STYLES
+*/
+
+/**
+* STYLES FOR ROTATING 3D CUBE
+*/
+
+/* This represents the cube. It's children are the 4 sides of cube (front, back, left and right).*/
+.photo-cube {
+  margin: 0 auto;
+  /* The cube will rotate over 2 seconds*/
+  transition: transform 2s ease-in-out;
+  width: 90%;
+  aspect-ratio : 1 / 1;
+  /* preserve the 'persepective' property set in its parent .cell container */
+  transform-style: preserve-3d;
+  margin-bottom: 7px;
+}
+
+/* On hover, rotate the cube until it's back is shown */
+.photo-cube:hover {
+  transform: rotateY(-270deg);
+}
+
+/* these are classes for each side of the cube. They are children of .photo-cube */
+.front,
+.back,
+.left,
+.right {
+  /* they are set to the size of their parent */
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* This positions them absolutely relative to parent. */
+  position: absolute;
+  transform-style: inherit;
+  /* their backs are hidden, so we can't see what's behind them */
+  backface-visibility: hidden;
+}
+
+/* root element, to hold the variables which will be used by the sides of the cube.
+  These will be adjusted in JS on page load + screen resize, to adapt to the cube's width */
+:root {
+  --pos-translate-amount: 170px;
+  --neg-translate-amount: -170px;
+}
+
+/* the sides of the cube are transformed to create a cube */
+.front {
+  transform: translateZ(var(--pos-translate-amount));
+}
+
+.back, .back-overlay {
+  transform: translateZ(var(--neg-translate-amount)) rotateY(270deg);
+  transform-origin: center left;
+}
+
+.left {
+  transform: rotateY(-270deg) translateX(var(--pos-translate-amount));
+  transform-origin: top right;
+}
+
+.right {
+  transform: translateZ(var(--neg-translate-amount)) rotateY(180deg);
+}
+
+/* the back-overlay covers the back side of the cube. */
+.back-overlay {
+    /* It will transition to display the overlay towards the end of the cube rotation */
+    transition: background-color 0.3s ease-out 1.5s;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* increase z-index to make sure .back-overlay is visible over back */
+    z-index: 3;
+}
+
+/* When the cube is hovered over, the back-overlay will change its colour, using the transition...
+... defined in the .back-overlay class */
+.photo-cube:hover > .back-overlay {
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Styles for the button that appears on the overlay on the back of the rotating cube */
+.back-overlay button {
+  /* It is hidden by default */
+  visibility: hidden;
+  /* It will transition back to its default visibility of hidden after cube hover ends */
+  transition: visibility 0.8s ease-out;
+  padding: 10px 18px;
+  background: #ddd;
+  color: #2a2b2d;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.2);
+}
+
+/* the button over the back-overlay will become visible on transition, during cube rotation. */
+.photo-cube:hover > .back-overlay > button {
+  visibility: visible;
+  transition: visibility 0.3s ease-out 1.4s;
+}
+
+/*
+* OTHER EXTRA STYLES
+**/
+
+/* box-shadow for the images on the home page */
+.photo-cube > img {
+  box-shadow: 0px 0px 9px 2px rgba(10, 10, 10, 0.2)
+}
+
+/* increase the size of the cube on the smallest devices */
+@media (max-width: 500px) {
+    .photo-cube {
+        width: 100%;
+    }
+}
+
+/* image on about page */
+.about-image {
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.links-box {
+  display: flex;
+  flex-flow: column;
+  gap: 18px;
+  padding: 10px;
+  color: #828583;
+}
+.contact-details {
+  font-size: 1.4em;
+}

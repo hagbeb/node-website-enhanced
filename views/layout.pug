@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="en" dir="ltr")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Andrew Whatmore Portfolio Site
+    link(href='https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,800', rel='stylesheet')
+    link(rel='stylesheet', href='/static/css/normalize.css')
+    link(rel='stylesheet', href='/static/css/styles.css')
+
+  body
+    #my-info.sidebar
+      .sidebar-info-box
+        br
+        .thumbnail-box
+          a(href='/')
+            img.thumbnail(src='/static/images/f033b_s_intensifier.jpg', alt='Andrew Whatmore, Full Stack JavaScript Developer')
+        
+        .dev-intro-box
+          a(href='/')
+            h5 Andrew Whatmore
+
+          p Full Stack JavaScript Developer. I develop practical JavaScript apps with security in mind, as well as WordPress websites.
+        .links-box
+          a(href='/about') Learn More &rarr;
+
+          a(href='/contact') Contact &rarr;
+
+          a(href='/') Home &rarr;
+
+          Copyright.copyright-notice Copyright © #{current_year} | by Boffware        
+    
+    .wrapper
+      .header
+        .header-info-box
+          button#menu-icon.menu-icon(type='button' data-toggle='my-info')
+
+          span Andrew Whatmore
+
+      block content
+  script(src='/static/js/script.js')
